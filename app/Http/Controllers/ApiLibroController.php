@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Libro;
+use App\libros;
 class ApiLibroController extends Controller
 {
     public function index()
     {
-         $libros = new libro();
+        return libros::all();
     }
 }
