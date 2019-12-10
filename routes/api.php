@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 #llibros
 Route::get('/libros', 'ApiLibroController@index');
+Route::get('/libros/nombreAutor/{slug}','LibrosControllers@motrarPorAutor')->name('LibrosControllers');
+Route::get('/libros/genero/{slug}','LibrosControllers@mostrarPorGenero')->name('LibrosControllers');
