@@ -84,7 +84,7 @@ class PrestamoController extends Controller
         }
 
         public function allDevoluciones($user){
-            $prestamos = DB::table('prestamos')->where('id_user',$user)->whereNotNull('date_devol')->get(['id','id_libro','']);
+            $prestamos = DB::table('prestamos')->where('id_user',$user)->whereNotNull('date_devol')->get(['id','id_libros','']);
             return response()->json($prestamos);
         }
 
